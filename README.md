@@ -1,7 +1,9 @@
 # ids706_project11_ll442
 
 In this project, a data pipeline is created using Databricks, with one data source and data sink included. 
-Specifically, first, I connect this github repo to Azure Databrick. Then I write three files in my repo for Ingest, Prepare, and Analyze on Azure databricks. 
+
+Specifically, first, this github repo is connected to Azure Databrick. 
+Then, the data pipeline ingest, prepare and analyze are implmented in data_process.py in this repo on the platform Azure Databricks.
 
 ## Step 1: Ingest data
 In this step, dataset OccupationalEmploymentandWageStatistics_final.csv uploaded to Databrick file system is ingested to the cluster of workspace with Spark
