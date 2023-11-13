@@ -2,7 +2,6 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import regexp_replace, col
 import pyspark.sql.functions as F
 from collections import defaultdict
-import statistics
 
 
 ## step1: ingest data from dbfs with spark
@@ -10,7 +9,9 @@ import statistics
 spark = SparkSession.builder.appName("CSVIngestion").getOrCreate()
 
 # Read CSV file
-df = spark.read.format("csv").option("header", "true").load("dbfs:/FileStore/shared_uploads/linkekk@ad.unc.edu/OccupationalEmploymentandWageStatistics_final.csv")  # Replace with your file path
+df = spark.read.format("csv").\
+option("header", "true").\
+load("dbfs:/FileStore/shared_uploads/linkekk@ad.unc.edu/OccupationalEmploymentandWageStatistics_final.csv")  
 
 # Show the first few rows of the DataFrame
 df.head()
@@ -29,7 +30,9 @@ meanHash = defaultdict()
 maxHash = defaultdict()
 minHash = defaultdict()
 
-columns = ['10th %', '25th %', 'Entry level', 'Median', 'Mean', 'Experienced', '75th %', '90th %']
+columns = ['10th %', '25th %', 'Entry level', 'Median', 'Mean', 'Experienced', \
+'75th %', '90th %']
+
 for column in columns:
     df = df.withColumn(column, regexp_replace(col(column), "[\$,]", "").cast("integer"))
     # meanHash[column] = int(statistics.mean(myHash[column]))
