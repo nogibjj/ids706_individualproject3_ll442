@@ -97,6 +97,21 @@ Dataset transformed `ncemployment` are stored in Delta Lake and can be found in 
 
 9. `test_main.py` is the test file for `main.py`
 
+## Automated Trigger 
+To set up automated trigger for the notebook on Azure Databricks, 
+
+1. create a new workflow under the workflow section of the workspace
+
+2. Change the trigger setting to ensure automatic trigger
+
+![trigger1](./image/trigger1.png)
+
+![trigger2](./image/trigger2.png)
+
+Note: However, due to the limit of the subscription resouce of my account, the automatic workflow does not run successfully!!!
+Such a problem can be solved only when more resource are provided by the professor.
+(Extra resource should be paid...)
+
 
 ## Video
 You can understand better about the project with this video
