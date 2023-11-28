@@ -30,7 +30,7 @@ The data table transformed is shown as below:
 
 3. Load Operation
 
-  Transformed datatable has been loaded to **Delta Lake** for further convenient operation.
+  Transformed datatable has been loaded to **Delta Lake** for further operation.
 
 ![load1](./image/load1.png)
 ![load2](./image/load2.png)
@@ -52,7 +52,7 @@ The transformed table stored in Delta Lake has been loaded and its value validit
 
   As can be seen from the visualization graph, overally, it can be concluded that **wage increases proportionally with the experience level** in North Carolina for different occupation. 
 
-  Specifically, there is a significant salary difference between 75th and 90th, which indicates the importance of experience in the majority of the fields. Additionally, for employees before median experience level, they are paid similarly because they do not have significant experience difference.
+  Specifically, there is a significant salary difference between 75th and 90th, which indicates the importance of long-term experience in the majority of the fields. Additionally, for employees before median experience level, they are paid similarly because they do not have significant experience difference.
 
   As a result, it is recommended to **persist** to the primary career path as wage increases gradually with experience in the majority of the fields. For entry-level employee who found minimal increase in their wage, it suggested to **stick to the path for longer time** since there will be an increase in salary after early career stage.  
 
@@ -64,11 +64,13 @@ The transformed table stored in Delta Lake has been loaded and its value validit
   `spark = SparkSession.builder.appName("CSVIngestion").getOrCreate()`
 
   `df.createOrReplaceTempView("kk_table")`
+
 2. SQL implementation
 
   Spark library can be used for convenient SQL implementation in python file.
 
   `result = spark.sql("SELECT * FROM kk_table WHERE Occupation = 'Legal'")`
+
 3. Transformation
 
    Based on the Spark Data frame, different transformation including filtering, renaming and replacing over the original dataset can be carried out efficiently.
@@ -89,7 +91,7 @@ Dataset transformed `ncemployment` are stored in Delta Lake and can be found in 
 
 6. `image` includes all the notebook result
 
-7. `data_processing.ipynb` includes all the operations related with the dataset
+7. `data_process.ipynb` includes all the operations related with the dataset
 
 8. `main.py` is the file to be tested
 
@@ -98,6 +100,7 @@ Dataset transformed `ncemployment` are stored in Delta Lake and can be found in 
 
 ## Video
 You can understand better about the project with this video
+
 Hope you enjoy watching :D
 
 
