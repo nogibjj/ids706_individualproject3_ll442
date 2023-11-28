@@ -108,9 +108,10 @@ To set up automated trigger for the notebook on Azure Databricks,
 
 ![trigger2](./image/trigger2.png)
 
-Note: However, due to the limit of the subscription resouce of my account, the automatic workflow does not run successfully!!!
+Note: However, due to the limit of the subscription resouce of my Azure account, the final version automatic workflow does not run successfully!!!
+(But the first version works well)
 
-Such a problem can be solved only when more resource are provided by the professor.
+Such a problem can be solved only when more resource are provided by the professor...
 (Extra resource are charged...)
 
 
@@ -118,6 +119,8 @@ Such a problem can be solved only when more resource are provided by the profess
 You can understand better about the project with this video
 
 Hope you enjoy watching :D
+
+[To know more about this project? Press me!!!](https://youtu.be/FAAx4pTGmC8)
 
 
 
