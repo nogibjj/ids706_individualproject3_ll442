@@ -12,10 +12,10 @@ lint:
 	ruff check --fix .
 
 format:	
-	# ./env/bin/black *.py 
+	black *.py 
 
 test:
-	# ./env/bin/python -m pytest test_main.py 
+	python -m pytest test_main.py 
 	
 		
 all: setup install lint format test 
