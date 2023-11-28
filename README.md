@@ -78,6 +78,23 @@ The transformed table stored in Delta Lake has been loaded and its value validit
 ## Delta Lake
 Dataset transformed `ncemployment` are stored in Delta Lake and can be found in hive_metastore in the cluster where the notebook runs.`dbfs:/user/hive/warehouse/ncemployment`
 
+## Automated Trigger 
+To set up automated trigger for the notebook on Azure Databricks, 
+
+1. Create a new workflow under the workflow section of the workspace
+
+2. Change the trigger setting to ensure automatic trigger
+
+![trigger1](./image/trigger1.png)
+
+![trigger2](./image/trigger2.png)
+
+Note: However, due to the limit of the subscription resouce of my Azure account, the final version automatic workflow does not run successfully!!!
+(But the first version works well)
+
+Such a problem can be solved only when more resource are provided by the professor...
+(Extra resource are charged...)
+
 ## Project Structure
 1. `.devcontainer` includes a Dockerfile and devcontainer.json. The files in this container specify how the project can be set up and deployed to codespace.
 
@@ -96,23 +113,6 @@ Dataset transformed `ncemployment` are stored in Delta Lake and can be found in 
 8. `main.py` is the file to be tested
 
 9. `test_main.py` is the test file for `main.py`
-
-## Automated Trigger 
-To set up automated trigger for the notebook on Azure Databricks, 
-
-1. Create a new workflow under the workflow section of the workspace
-
-2. Change the trigger setting to ensure automatic trigger
-
-![trigger1](./image/trigger1.png)
-
-![trigger2](./image/trigger2.png)
-
-Note: However, due to the limit of the subscription resouce of my Azure account, the final version automatic workflow does not run successfully!!!
-(But the first version works well)
-
-Such a problem can be solved only when more resource are provided by the professor...
-(Extra resource are charged...)
 
 
 ## Video
